@@ -76,122 +76,214 @@
       user-select: none;
       }
 
-.menu-panel {
-position: absolute;
-top: 0;
-left: 54px;
-display: none;
-font-family: "PT Sans", sans-serif;
-white-space: nowrap;
+      .menu-panel {
+      position: absolute;
+      top: 0;
+      left: 54px;
+      display: none;
+      font-family: "PT Sans", sans-serif;
+      white-space: nowrap;
+      }
+
+      .menu-item {
+      background: white;
+      padding: 10px 14px;
+      margin-bottom: 6px;
+      border-radius: 22px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      }
+
+      .menu-item:hover {
+      background: rgb(235,235,235);
+      }
+
+
+      .info-dialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1200;
+
+      width: 420px;
+      max-width: calc(100vw - 40px);
+      max-height: calc(100vh - 80px);
+
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+
+      padding: 18px;
+
+      font-family: "PT Sans", sans-serif;
+
+      display: none;
+      overflow-y: auto;
+      }
+
+      .info-dialog-title {
+      font-family: "PT Serif", serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: center;
+      }
+
+      .info-dialog-text {
+      font-size: 14px;
+      line-height: 1.4;
+      text-align: justify;
+      }
+
+      .info-dialog-close {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      }
+
+
+      .search-panel {
+      position: absolute;
+      top: 0;
+      left: 54px;
+      display: none;
+      font-family: "PT Sans", sans-serif;
+      white-space: nowrap;
+      }
+
+      .search-input {
+      width: 260px;
+      height: 44px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 22px;
+      background: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      padding: 0 14px;
+      font-family: "PT Sans", sans-serif;
+      font-size: 14px;
+      outline: none;
+      }
+
+      .search-results {
+      margin-top: 6px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      font-family: "PT Sans", sans-serif;
+      font-size: 13px;
+      max-height: 240px;
+      overflow-y: auto;
+      display: none;
+      }
+
+      .search-result {
+      padding: 8px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid rgb(230,230,230);
+      }
+
+      .search-result:hover {
+      background: rgb(235,235,235);
+      }
+
+      .location-panel {
+      position: absolute;
+      top: 0;
+      left: 54px;
+      display: none;
+      font-family: "PT Sans", sans-serif;
+      white-space: nowrap;
+      }
+
+      .nearest-results {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      font-family: "PT Sans", sans-serif;
+      font-size: 13px;
+      max-height: 260px;
+      overflow-y: auto;
+      width: 300px;
+      }
+
+      .nearest-title {
+      font-weight: 700;
+      padding: 10px 12px;
+      border-bottom: 1px solid rgb(230,230,230);
+      }
+
+      .nearest-item {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-bottom: 1px solid rgb(230,230,230);
+      overflow: hidden;
+      }
+
+      .nearest-item:hover {
+      background: rgb(235,235,235);
+      }
+
+.leaflet-control-locate {
+margin-top: 10px !important;
 }
 
-.menu-item {
-background: white;
-padding: 10px 14px;
-margin-bottom: 6px;
-border-radius: 22px;
-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-font-size: 14px;
-font-weight: 700;
-white-space: nowrap;
-cursor: pointer;
+.leaflet-control-locate,
+.leaflet-control-locate.leaflet-bar {
+border: none !important;
+background: transparent !important;
+box-shadow: none !important;
 }
 
-.menu-item:hover {
-background: rgb(235,235,235);
+.leaflet-control-locate a {
+width: 44px !important;
+height: 44px !important;
+border-radius: 50% !important;
+background: white !important;
+box-shadow: 0 1px 4px rgba(0,0,0,0.3) !important;
+border: none !important;
+
+display: flex !important;
+align-items: center !important;
+justify-content: center !important;
+
+text-decoration: none !important;
 }
 
-.info-dialog {
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 1200;
-
-width: 420px;
-max-width: calc(100vw - 40px);
-max-height: calc(100vh - 80px);
-
-background: white;
-border-radius: 18px;
-box-shadow: 0 2px 12px rgba(0,0,0,0.35);
-
-padding: 18px;
-
-font-family: "PT Sans", sans-serif;
-
-display: none;
-overflow-y: auto;
+.leaflet-control-locate a span,
+.leaflet-control-locate a i {
+display: none !important;
 }
 
-.info-dialog-title {
-font-family: "PT Serif", serif;
-font-size: 15px;
-font-weight: 700;
-margin-bottom: 10px;
-text-align: center;
+.leaflet-control-locate a::after {
+content: "➤";
+display: block;
+font-size: 20px;
+color: black;
+line-height: 1;
+transform: translateY(-2px) rotate(-45deg);
 }
 
-.info-dialog-text {
-font-size: 14px;
-line-height: 1.4;
-text-align: justify;
+.leaflet-control-locate.active a,
+.leaflet-control-locate.following a,
+.leaflet-control-locate.requesting a,
+.leaflet-control-locate a:hover,
+.leaflet-control-locate a:focus,
+.leaflet-control-locate a:active {
+background: white !important;
+box-shadow: 0 1px 4px rgba(0,0,0,0.3) !important;
+border: none !important;
+outline: none !important;
 }
-
-.info-dialog-close {
-position: absolute;
-top: 8px;
-right: 12px;
-cursor: pointer;
-font-size: 18px;
-font-weight: 700;
-}
-
-.search-panel {
-position: absolute;
-top: 0;
-left: 54px;
-display: none;
-font-family: "PT Sans", sans-serif;
-white-space: nowrap;
-}
-
-.search-input {
-width: 260px;
-height: 44px;
-box-sizing: border-box;
-border: none;
-border-radius: 22px;
-background: white;
-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-padding: 0 14px;
-font-family: "PT Sans", sans-serif;
-font-size: 14px;
-outline: none;
-}
-
-.search-results {
-margin-top: 6px;
-background: white;
-border-radius: 14px;
-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
-font-family: "PT Sans", sans-serif;
-font-size: 13px;
-max-height: 240px;
-overflow-y: auto;
-display: none;
-}
-
-.search-result {
-padding: 8px 12px;
-cursor: pointer;
-border-bottom: 1px solid rgb(230,230,230);
-}
-
-.search-result:hover {
-background: rgb(235,235,235);
-}
-
     </style>
 
   </head>
@@ -208,17 +300,18 @@ background: rgb(235,235,235);
       z-index: 999;
       ">
       <iframe id="frame" style="width:100%;height:100%;border:0;"></iframe>
-    </div>
+      </div>
 
-<div id="infoOpcina" class="info-dialog">
-<div class="info-dialog-close" onclick="document.getElementById('infoOpcina').style.display='none'">×</div>
-<div class="info-dialog-title">Općina Grude</div>
-<div class="info-dialog-text">
-Općina Grude smještena je u jugoistočnom dijelu Bosne i Hercegovine, u okviru Županije zapadnohercegovačke. Graniči s preostale tri jedinice lokalne samouprave u Županiji, odnosno s Općinom Posušje na sjeveru, Gradom Širokim Brijegom na istoku te s Gradom Ljubuškim na jugu. Na zapadu Općina Grude graniči s Republikom Hrvatskom, odnosno s Gradom Imotskim na sjeverozapadu, Općinom Runovići na zapadu te na jugozapadu s Gradom Vrgorcem.
-</div>
-</div>
+      <div id="infoOpcina" class="info-dialog">
+      <div class="info-dialog-close" onclick="document.getElementById('infoOpcina').style.display='none'">×</div>
+      <div class="info-dialog-title">Općina Grude</div>
+      <div class="info-dialog-text">
+      Općina Grude smještena je u jugoistočnom dijelu Bosne i Hercegovine, u okviru Županije zapadnohercegovačke. Graniči s preostale tri jedinice lokalne samouprave u Županiji, odnosno s Općinom Posušje na sjeveru, Gradom Širokim Brijegom na istoku te s Gradom Ljubuškim na jugu. Na zapadu Općina Grude graniči s Republikom Hrvatskom, odnosno s Gradom Imotskim na sjeverozapadu, Općinom Runovići na zapadu te na jugozapadu s Gradom Vrgorcem.
+      </div>
+      </div>
 
       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+      <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
       <script src="Podatci/crkve.js"></script>
       <script src="Podatci/groblja.js"></script>
       <script src="Podatci/skole.js"></script>
@@ -246,7 +339,8 @@ Općina Grude smještena je u jugoistočnom dijelu Bosne i Hercegovine, u okviru
       <script src="Podatci/adresniregistar.js"></script>
     <script>
 
-      var obuhvat = [[43, 17],[44, 18]];
+      var obuhvat = [[40, 11],[50, 21]]; //ZASAD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PROMIJENI!!!!!!!!!!!!!!!!!!!!!! OVO JE SAMO TEST JER SAM U ZAGREBU!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      var graniceObuhvata = L.latLngBounds(obuhvat);
       var map = L.map('map', {
       maxBounds: obuhvat,
       maxBoundsViscosity: 1.0,
@@ -281,7 +375,7 @@ Općina Grude smještena je u jugoistočnom dijelu Bosne i Hercegovine, u okviru
       setTimeout(promijenimjeriloOznake, 0);
 
       function okvir() {
-      const isMobile = window.innerWidth < 600;
+	    const isMobile = window.innerWidth < 600;
       const popupWidth = isMobile ? 225 * 0.8 : 225;
 
       return {
@@ -294,33 +388,38 @@ Općina Grude smještena je u jugoistočnom dijelu Bosne i Hercegovine, u okviru
       const url3D = "index.html";
       const url2D = "https://virtualtours.virtualno360.hr/F1aR2rgBvf/46190512p&27.02h&80.17t";
 
-function zatvoriOtvoreno(osim) {
+      function zatvoriOtvoreno(osim) {
 
-var menuPanel = document.querySelector('.menu-panel');
-var searchPanel = document.querySelector('.search-panel');
-var viewer = document.getElementById('viewer');
-var frame = document.getElementById('frame');
+      var menuPanel = document.querySelector('.menu-panel');
+      var searchPanel = document.querySelector('.search-panel');
+      var locationPanel = document.querySelector('.location-panel');
+      var viewer = document.getElementById('viewer');
+      var frame = document.getElementById('frame');
 
-if (osim !== 'izbornik' && menuPanel) {
-menuPanel.style.display = 'none';
-}
+      if (osim !== 'izbornik' && menuPanel) {
+      menuPanel.style.display = 'none';
+      }
 
-if (osim !== 'pretraga' && searchPanel) {
-searchPanel.style.display = 'none';
+      if (osim !== 'pretraga' && searchPanel) {
+      searchPanel.style.display = 'none';
 
-var searchInput = document.getElementById('searchInput');
-if (searchInput) {
-searchInput.value = '';
-}
-}
+      var searchInput = document.getElementById('searchInput');
+      if (searchInput) {
+      searchInput.value = '';
+      }
+      }
 
-if (osim !== '3d' && viewer) {
-viewer.style.display = 'none';
-frame.src = '';
-prikaz = '3D';
-}
+      if (osim !== 'lociranje' && locationPanel) {
+      locationPanel.style.display = 'none';
+      }
 
-}
+      if (osim !== '3d' && viewer) {
+      viewer.style.display = 'none';
+      frame.src = '';
+      prikaz = '3D';
+      }
+
+      }
 
       var gumbPrikaza = L.control({ position: 'topright' });
       gumbPrikaza.onAdd = function () {
@@ -349,216 +448,367 @@ prikaz = '3D';
       };
       gumbPrikaza.addTo(map);
 
-var izbornik = L.control({ position: 'topleft' });
+      var izbornik = L.control({ position: 'topleft' });
 
-izbornik.onAdd = function () {
-var container = L.DomUtil.create('div');
+      izbornik.onAdd = function () {
+      var container = L.DomUtil.create('div');
 
-var gumb = L.DomUtil.create('div', 'toggle-btn', container);
-gumb.innerHTML = "☰";
-gumb.title = "Izbornik";
+      var gumb = L.DomUtil.create('div', 'toggle-btn', container);
+      gumb.innerHTML = "☰";
+      gumb.title = "Izbornik";
 
-var panel = L.DomUtil.create('div', 'menu-panel', container);
+      var panel = L.DomUtil.create('div', 'menu-panel', container);
 
-container.panel = panel;
+      container.panel = panel;
 
-panel.innerHTML = `
-<div class="menu-item" onclick="document.getElementById('infoOpcina').style.display='block'">Općina Grude</div><div class="menu-item">Povijest Općine Grude</div>
-<div class="menu-item">Općina Grude danas</div>
-`;
+      panel.innerHTML = `
+      <div class="menu-item" onclick="document.getElementById('infoOpcina').style.display='block'">Općina Grude</div><div class="menu-item">Povijest Općine Grude</div>
+      <div class="menu-item">Općina Grude danas</div>
+      `;
 
-gumb.onclick = function(e) {
-L.DomEvent.stopPropagation(e);
-zatvoriOtvoreno('izbornik');
-panel.style.display = panel.style.display === "block" ? "none" : "block";
-};
+      gumb.onclick = function(e) {
+      L.DomEvent.stopPropagation(e);
+      zatvoriOtvoreno('izbornik');
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+      };
 
-L.DomEvent.disableClickPropagation(container);
+      L.DomEvent.disableClickPropagation(container);
 
-return container;
-};
+      return container;
+      };
 
-izbornik.addTo(map);
+      izbornik.addTo(map);
 
-var pretrazi = L.control({ position: 'topleft' });
+      var pretrazi = L.control({ position: 'topleft' });
 
-pretrazi.onAdd = function () {
-var container = L.DomUtil.create('div');
-container.style.marginTop = '10px';
+      pretrazi.onAdd = function () {
+      var container = L.DomUtil.create('div');
+      container.style.marginTop = '10px';
 
-var gumb = L.DomUtil.create('div', 'toggle-btn', container);
-gumb.innerHTML = "🔎︎";
-gumb.style.display = "flex";
-gumb.style.alignItems = "center";
-gumb.style.justifyContent = "center";
-gumb.style.transform = "rotate(-90deg)";
-gumb.style.fontSize = "20px";
-gumb.title = "Pretraži";
+      var gumb = L.DomUtil.create('div', 'toggle-btn', container);
+      gumb.innerHTML = "🔎︎";
+      gumb.style.display = "flex";
+      gumb.style.alignItems = "center";
+      gumb.style.justifyContent = "center";
+      gumb.style.transform = "rotate(-90deg)";
+      gumb.style.fontSize = "20px";
+      gumb.title = "Pretraži";
 
-var panel = L.DomUtil.create('div', 'search-panel', container);
+      var panel = L.DomUtil.create('div', 'search-panel', container);
 
-panel.innerHTML = `
-<input id="searchInput" class="search-input" type="text" placeholder="Pretraži...">
-<div id="searchResults" class="search-results"></div>
-`;
+      panel.innerHTML = `
+      <input id="searchInput" class="search-input" type="text" placeholder="Pretraži...">
+      <div id="searchResults" class="search-results"></div>
+      `;
+
+      setTimeout(function() {
+      var results = document.getElementById("searchResults");
+
+      if (results) {
+      L.DomEvent.disableScrollPropagation(results);
+      L.DomEvent.disableClickPropagation(results);
+      }
+      }, 0);
+
+      gumb.onclick = function(e) {
+      L.DomEvent.stopPropagation(e);
+      zatvoriOtvoreno('pretraga');
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+
+      if (panel.style.display === "block") {
+      setTimeout(function() {
+      var input = document.getElementById("searchInput");
+      input.focus();
+      input.oninput = pokreniPretragu;}, 50);
+      }
+      };
+      L.DomEvent.disableClickPropagation(container);
+
+      return container;
+      };
+
+      pretrazi.addTo(map);
+
+var locateControl = L.control.locate({
+position: 'topleft',
+setView: 'once',
+flyTo: true,
+keepCurrentZoomLevel: false,
+initialZoomLevel: 18,
+drawCircle: true,
+drawMarker: true,
+showCompass: true,
+
+strings: {
+title: "Prikaži lokaciju",
+popup: "Nalazite se unutar {distance} m od ovog mjesta.",
+outsideMapBoundsMsg: "Nalazite se izvan područja Općine Grude."
+},
+
+locateOptions: {
+enableHighAccuracy: true,
+maximumAge: 5000,
+timeout: 10000,
+watch: true
+}
+}).addTo(map);
 
 setTimeout(function() {
-var results = document.getElementById("searchResults");
+
+var locateContainer = document.querySelector('.leaflet-control-locate');
+
+if (locateContainer) {
+
+var panel = L.DomUtil.create('div', 'location-panel', locateContainer);
+panel.innerHTML = `<div id="nearestResults" class="nearest-results"></div>`;
+
+var results = document.getElementById("nearestResults");
 
 if (results) {
 L.DomEvent.disableScrollPropagation(results);
 L.DomEvent.disableClickPropagation(results);
 }
+
+}
+
 }, 0);
 
-gumb.onclick = function(e) {
-L.DomEvent.stopPropagation(e);
-zatvoriOtvoreno('pretraga');
-panel.style.display = panel.style.display === "block" ? "none" : "block";
+map.on('locatelocationfound', function(e) {
 
-if (panel.style.display === "block") {
-setTimeout(function() {
-var input = document.getElementById("searchInput");
-input.focus();
-input.oninput = pokreniPretragu;}, 50);
-}
-};
-L.DomEvent.disableClickPropagation(container);
+var userLatLng = e.latlng;
 
-return container;
-};
+if (!graniceObuhvata.contains(userLatLng)) {
+alert("Nalazite se izvan područja Općine Grude.");
+locateControl.stop();
 
-pretrazi.addTo(map);
-
-var objektiZaPretragu = [];
-
-function dodajUPretragu(layer, feature, nazivAtribut, ikonaUrl) {
-
-var naziv = feature.properties[nazivAtribut] || "";
-
-objektiZaPretragu.push({
-layer: layer,
-naziv: naziv,
-ikonaUrl: ikonaUrl,
-tekst: naziv.toLowerCase()
-});
-
+var locationPanel = document.querySelector('.location-panel');
+if (locationPanel) {
+locationPanel.style.display = 'none';
 }
 
-function dodajUPretragu(
-layer,
-feature,
-nazivAtribut,
-ikonaUrl,
-dodatniAtribut = null
-) {
-
-var naziv = feature.properties[nazivAtribut] || "";
-
-if (dodatniAtribut) {
-
-var dodatno = feature.properties[dodatniAtribut] || "";
-
-if (dodatno !== "") {
-naziv += ", " + dodatno;
-}
-
-}
-
-objektiZaPretragu.push({
-layer: layer,
-naziv: naziv,
-ikonaUrl: ikonaUrl,
-tekst: naziv.toLowerCase()
-});
-
-}
-
-function pokreniPretragu() {
-var input = document.getElementById("searchInput");
-var results = document.getElementById("searchResults");
-var upit = input.value.toLowerCase().trim();
-
-results.innerHTML = "";
-
-if (upit.length < 2) {
-results.style.display = "none";
 return;
 }
 
-var pogodci = objektiZaPretragu.filter(function(obj) {
-return obj.tekst.includes(upit);
+var locationPanel = document.querySelector('.location-panel');
+
+if (locationPanel) {
+locationPanel.style.display = 'block';
+}
+
+prikaziNajblizeObjekte(userLatLng);
+
 });
 
-if (pogodci.length === 0) {
-results.innerHTML = `<div class="search-result">Nema rezultata</div>`;
-results.style.display = "block";
-return;
+      var objektiZaPretragu = [];
+
+      function dodajUPretragu(
+      layer,
+      feature,
+      nazivAtribut,
+      ikonaUrl,
+      dodatniAtribut = null
+      ) {
+
+      var naziv = feature.properties[nazivAtribut] || "";
+
+      if (dodatniAtribut) {
+
+      var dodatno = feature.properties[dodatniAtribut] || "";
+
+      if (dodatno !== "") {
+      naziv += ", " + dodatno;
+      }
+
+      }
+
+      objektiZaPretragu.push({
+      layer: layer,
+      naziv: naziv,
+      ikonaUrl: ikonaUrl,
+      tekst: naziv.toLowerCase()
+      });
+
+      }
+
+      function pokreniPretragu() {
+      var input = document.getElementById("searchInput");
+      var results = document.getElementById("searchResults");
+      var upit = input.value.toLowerCase().trim();
+
+      results.innerHTML = "";
+
+      if (upit.length < 2) {
+      results.style.display = "none";
+      return;
+      }
+
+
+      var pogodci = objektiZaPretragu.filter(function(obj) {
+      return obj.tekst.includes(upit);
+      });
+
+      if (pogodci.length === 0) {
+      results.innerHTML = `<div class="search-result">Nema rezultata</div>`;
+      results.style.display = "block";
+      return;
+      }
+
+      pogodci.forEach(function(obj) {
+      var div = document.createElement("div");
+      div.className = "search-result";
+      div.innerHTML = `
+      <img src="${obj.ikonaUrl}" style="
+      width:18px;
+      height:18px;
+      vertical-align:middle;
+      margin-right:8px;
+      ">
+      <span>${obj.naziv}</span>
+      `;
+
+      div.onclick = function(e) {
+      L.DomEvent.stopPropagation(e);
+
+      document.querySelector(".search-panel").style.display = "none";
+      input.value = "";
+      results.innerHTML = "";
+      results.style.display = "none";
+
+      map.flyTo(obj.layer.getLatLng(), Math.max(map.getZoom(), 17), {
+      duration: 0.8
+      });
+
+      setTimeout(function() {
+      obj.layer.fire('click', {
+      latlng: obj.layer.getLatLng()
+      });
+      }, 850);
+      };
+
+      results.appendChild(div);
+      });
+
+      results.style.display = "block";
+      }
+
+      function formatUdaljenost(metri) {
+      if (metri < 1000) {
+      return Math.round(metri) + " m";
+      }
+
+      return (metri / 1000).toFixed(2) + " km";
+      }
+
+      function prikaziNajblizeObjekte(userLatLng) {
+      var results = document.getElementById("nearestResults");
+
+      var najbliziPoSloju = {};
+
+      objektiZaPretragu.forEach(function(obj) {
+
+      var udaljenost = userLatLng.distanceTo(obj.layer.getLatLng());
+      var kljucSloja = obj.ikonaUrl;
+
+      if (
+      !najbliziPoSloju[kljucSloja] ||
+      udaljenost < najbliziPoSloju[kljucSloja].udaljenost
+      ) {
+      najbliziPoSloju[kljucSloja] = {
+      obj: obj,
+      udaljenost: udaljenost
+      };
+      }
+
+      });
+
+      var najblizi = Object.values(najbliziPoSloju).sort(function(a, b) {
+      return a.udaljenost - b.udaljenost;
+      });
+
+      results.innerHTML = `<div class="nearest-title">Najbliži objekti:</div>`;
+
+      najblizi.forEach(function(item) {
+      var div = document.createElement("div");
+      div.className = "nearest-item";
+
+      div.innerHTML = `
+      <img src="${item.obj.ikonaUrl}" style="
+      width:18px;
+      height:18px;
+      margin-right:8px;
+      flex-shrink:0;
+      ">
+
+      <span style="
+      flex:1;
+      overflow:hidden;
+      white-space:nowrap;
+      text-overflow:ellipsis;
+      ">
+      ${item.obj.naziv}
+      </span>
+
+      <span style="
+      margin-left:12px;
+      flex-shrink:0;
+      ">
+      ${formatUdaljenost(item.udaljenost)}
+      </span>
+      `;
+
+      div.onclick = function(e) {
+      L.DomEvent.stopPropagation(e);
+
+      map.flyTo(item.obj.layer.getLatLng(), Math.max(map.getZoom(), 15), {
+      duration: 0.8
+      });
+
+      setTimeout(function() {
+      item.obj.layer.fire('click', {
+      latlng: item.obj.layer.getLatLng()
+      });
+      }, 850);
+      };
+
+      results.appendChild(div);
+      });
+      }
+
+      map.on('click', function() {
+
+      var panel = document.querySelector('.menu-panel');
+
+      if (panel) {
+      panel.style.display = 'none';
+      }
+
+      var searchPanel = document.querySelector('.search-panel');
+
+      if (searchPanel) {
+      searchPanel.style.display = 'none';
+
+      var searchInput = document.getElementById('searchInput');
+      if (searchInput) {
+      searchInput.value = '';
+      }
+      }
+
+      var locationPanel = document.querySelector('.location-panel');
+
+      if (locationPanel) {
+      locationPanel.style.display = 'none';
+      }
+
+if (locateControl) {
+locateControl.stop();
 }
+      var dialog = document.getElementById('infoOpcina');
 
-pogodci.forEach(function(obj) {
-var div = document.createElement("div");
-div.className = "search-result";
-div.innerHTML = `
-<img src="${obj.ikonaUrl}" style="
-width:18px;
-height:18px;
-vertical-align:middle;
-margin-right:8px;
-">
-<span>${obj.naziv}</span>
-`;
+      if (dialog) {
+      dialog.style.display = 'none';
+      }
 
-div.onclick = function(e) {
-L.DomEvent.stopPropagation(e);
-
-document.querySelector(".search-panel").style.display = "none";
-input.value = "";
-results.innerHTML = "";
-results.style.display = "none";
-
-map.flyTo(obj.layer.getLatLng(), Math.max(map.getZoom(), 17), {
-duration: 0.8
-});
-
-setTimeout(function() {
-obj.layer.fire('click', {
-latlng: obj.layer.getLatLng()
-});
-}, 850);
-};
-
-results.appendChild(div);
-});
-
-results.style.display = "block";
-}
-
-map.on('click', function() {
-
-var panel = document.querySelector('.menu-panel');
-
-if (panel) {
-panel.style.display = 'none';
-}
-
-var searchPanel = document.querySelector('.search-panel');
-
-if (searchPanel) {
-searchPanel.style.display = 'none';
-
-var searchInput = document.getElementById('searchInput');
-if (searchInput) {
-searchInput.value = '';
-}
-}
-var dialog = document.getElementById('infoOpcina');
-
-if (dialog) {
-dialog.style.display = 'none';
-}
-
-});
+      });
 
       var Crkve = L.icon({
       iconUrl: 'Oznake/Crkve.svg',
@@ -588,7 +838,7 @@ dialog.style.display = 'none';
       `;
 
       layer.bindPopup(okvirCrkve, okvir());
-dodajUPretragu(layer, feature, "Naziv crkve", "Oznake/Crkve.svg", "Mjesto");      }}).addTo(map);
+      dodajUPretragu(layer, feature, "Naziv crkve", "Oznake/Crkve.svg", "Mjesto");      }}).addTo(map);
 
       var Groblja = L.icon({
       iconUrl: 'Oznake/Groblja.svg',
@@ -650,6 +900,7 @@ dodajUPretragu(layer, feature, "Naziv crkve", "Oznake/Crkve.svg", "Mjesto");    
 
       }}).addTo(map);
 
+
       var Vrtici = L.icon({
       iconUrl: 'Oznake/Vrtici.svg',
       iconSize: [24,24],
@@ -680,6 +931,7 @@ dodajUPretragu(layer, feature, "Naziv crkve", "Oznake/Crkve.svg", "Mjesto");    
       layer.bindPopup(okvirVrtici, okvir());
       dodajUPretragu(layer, feature, "Naziv ustanove", "Oznake/Vrtici.svg");
       }}).addTo(map);
+
 
       var SRUstanove = L.icon({
       iconUrl: 'Oznake/SRustanove.svg',
@@ -1227,7 +1479,7 @@ dodajUPretragu(layer, feature, "Naziv crkve", "Oznake/Crkve.svg", "Mjesto");    
       `;
 
       layer.bindPopup(okvirBanke, okvir());
-      dodajUPretragu(layer, feature, "Naziv poduzeća", "Oznake/Restorani.svg");
+      dodajUPretragu(layer, feature, "Naziv poduzeća", "Oznake/Banke.svg");
       }}).addTo(map);
 
       var Trgovine = L.icon({

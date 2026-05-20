@@ -559,7 +559,11 @@ var locateContainer = document.querySelector('.leaflet-control-locate');
 
 if (locateContainer) {
 
+L.DomEvent.disableClickPropagation(locateContainer);
+L.DomEvent.disableScrollPropagation(locateContainer);
+
 var panel = L.DomUtil.create('div', 'location-panel', locateContainer);
+
 panel.innerHTML = `<div id="nearestResults" class="nearest-results"></div>`;
 
 var results = document.getElementById("nearestResults");
@@ -573,8 +577,7 @@ L.DomEvent.disableClickPropagation(results);
 
 }, 0);
 
-map.on('locatelocationfound', function(e) {
-
+map.on('locationfound', function(e) {
 var userLatLng = e.latlng;
 
 if (!graniceObuhvata.contains(userLatLng)) {
